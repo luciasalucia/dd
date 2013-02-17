@@ -1,0 +1,46 @@
+<body <?php body_class(); ?>>
+  <div id="container">
+		<p id="logo">
+        	<a href="<?php echo get_option('home'); ?>">
+            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Chris Spooner logo" />
+            </a>
+        </p>
+		
+		<!--
+        <ul id="nav">
+			<li class="page_item page-item-6 current_page_item"><a href="http://chrisspooner.com/themes/portfolio" title="Home">Home</a></li>
+			<li class="page_item page-item-2"><a href="http://chrisspooner.com/themes/portfolio/about/" title="About">About</a></li>
+			<li class="page_item page-item-3"><a href="http://chrisspooner.com/themes/portfolio/portfolio/" title="Portfolio">Portfolio</a></li>
+			<li class="page_item page-item-5"><a href="http://chrisspooner.com/themes/portfolio/contact/" title="Contact">Contact</a></li>
+		</ul>
+        -->
+        <ul id="nav">
+			<?php wp_list('title_li='); ?>
+		</ul>
+		
+        <?php if (is_front_page()){ ?>
+            <!-- 
+            	<div id="header">
+                	 <h1>Hello, I'm Chris Spooner.</h1>
+                	 <h2>I craft websites that are beautiful on both the inside and out.</h2>
+    
+                	 <p class="btn"><a href="http://chrisspooner.com/themes/portfolio/portfolio">View my portfolio</a></p>
+                 </div>
+            -->
+            <div id="header">
+                <h1>Hello, I'm Chris Spooner.</h1>
+                <h2>I craft websites that are beautiful on both the inside and out.</h2>
+                <p class="btn"><a href="<?php echo get_option('home'); ?>/portfolio">View my portfolio</a></p>
+                
+            </div>
+
+		<?php }else{ ?>
+        	<!--
+            <div id="header" class="page">
+			   <h1>  About</h1>
+		    </div>
+            -->
+            <div id="header" class="page">
+			   <h1><?php wp_title(''); ?></h1>
+		    </div>
+		<?php } ?>
