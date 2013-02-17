@@ -1,0 +1,17 @@
+/* Wordpress Alignment Stuff */
+
+.centered {
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignright {
+	float: right;
+	margin-left: 15px;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 15px;
+}
